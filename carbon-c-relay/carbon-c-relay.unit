@@ -1,0 +1,11 @@
+[Unit]
+Description=Graphite-C-Relay
+After=network.target
+
+[Service]
+Restart=always
+ExecStart=/usr/sbin/relay -f /etc/carbon-c-relay/relay.conf -l /var/log/carbon-c-relay/relay.log
+
+
+[Install]
+WantedBy=multi-user.target
